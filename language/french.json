@@ -37,7 +37,7 @@
     },
     "uptime": {
       "triggers": ["uptime", "timeup", "online"],
-      "helpText": "`%1uptime` (Shows bot uptime.)",
+      "helpText": "`%1uptime` (Montre le temps de fonctionnement du bot.)",
       "message": "Je suis en ligne depuis",
       "hoursComma": "heures,",
       "minutesAnd": "minutes et",
@@ -102,7 +102,7 @@
     },
     "announcementChannel": {
       "triggers": ["ac", "announcementchannel"],
-      "helpText": "%1 `%2announcementchannel Streamer_Name #%3` or %1 `%2announcementchannel Streamer_Name %4` (Change le canal d'annonce pour le streamer spécifié.)",
+      "helpText": "%1 `%2announcementchannel Streamer_Name #%3` ou %1 `%2announcementchannel Streamer_Name %4` (Change le canal d'annonce pour le streamer spécifié.)",
       "message": "cchangement de canal d'annonce pour le streamer.",
       "noPermissionsForChannel": "ne peut pas publier dans ce canal. Changez les permissions ou choisissez un autre canal.",
       "streamerDoesNotExist": "Le streamer n'existe pas!",
