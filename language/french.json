@@ -1,0 +1,120 @@
+{
+  "noDiscordToken": "Aucun jeton d'authentification discord n'a été fourni.",
+  "noTwitchClientID": "Aucun jeton d'identification de client Twitch n'a été fourni.",
+  "includeTwitchClientSecret": "Si vous effectuez une mise à jour à partir d'une version précédente, assurez-vous que le champ 'twitch.clientSecret' existe dans settings.js.",
+  "noTwitchClientSecret": "Aucune  clef secrete de client Twitch n'a été fourni.",
+  "createdDataJSON": "Créé data.json.",
+  "usingExistingToken": "Utilisation d'un jeton existant. Le jeton expire le %s.",
+  "missmatchToken": "L'ID du client ne correspond pas au secret du jeton Twitch, rafraîchissez le jeton !",
+  "invalidTokenResponse": "Réponse non valide, rafraîchissement du jeton !",
+  "wroteTokenToDisk": "Écriture du jeton sur le disque. NOTE : NE PARTAGEZ PAS token.json AVEC QUI que ce soit.",
+  "genericTokenError": "Quelque chose s'est mal passé en essayant d'obtenir le jeton OAuth de Twitch, vérifiez votre id & secret client dans settings.js !",
+  "genericDataJSONErrorRetry": "Il y a un problème avec votre fichier data.json ! Réessayez dans 1 minute...",
+  "disconnectedDiscord": "Il semble que Discord soit déconnecté. Je ne vérifie pas les flux Twitch. Réessai dans 3 secondes...",
+  "noTwitchChannels": "Pas de chaînes Twitch. Ajoutez-en !",
+  "announcedStreams": "Annonce réussie de toutes les chaines.",
+  "throttledByTwitch": "Rejeté par Twitch ! Augmentez le timer dans settings.js et redémarrez !",
+  "twitchThrottleMessage": "\nMessage de l'accélérateur de Twitch: %s",
+  "streamStarted": "Début du streaming ",
+  "unknownGame": "jeu inconnu ",
+  "inGuild": "dans ",
+  "announcedInOverAtGuild": "Annoncé %s dans %s sur %s",
+  "announcementChannelDoesNotExist": "Impossible d'annoncer. Le canal d'annonce %s n'existe pas sur %s.",
+  "addedGuild": "Salon ajouté à la liste.",
+  "removedGuild": "Salon supprimé de la liste.",
+  "loggedIntoDiscord": "Connecté à Discord.",
+  "activityHasBeenSet": "L'activité a été définie.",
+  "reconnectingToDiscord": "Reconnexion à Discord...",
+  "reconnectedToDiscord": "Reconnecté à Discord. Tout est fonctionnel.",
+  "includeCooldownTimerWarning": "Une mise à jour récente a introduit un délai d'attente pour chaque annonce, afin de réduire le spam pendant les 'streams IRL', veuillez ajouter 'cooldownTimer : 21600000', dans votre fichier settings.json. Nous utilisons un délai d'attente de 6 heures pour le moment.",
+  "twitchError": "Quelque chose s'est produit avec votre requête Twitch : %1",
+  "commands": {
+    "help": {
+      "triggers": ["help", "h"],
+      "helpText": "`%1help <command>` (Remplacer <command> par une commande pour obtenir de l'aide sur une commande spécifique).",
+      "availableCommands": "Commandes disponibles",
+      "message": "**Commandes d'aide:** "
+    },
+    "uptime": {
+      "triggers": ["uptime", "timeup", "online"],
+      "helpText": "`%1uptime` (Shows bot uptime.)",
+      "message": "Je suis en ligne depuis",
+      "hoursComma": "heures,",
+      "minutesAnd": "minutes et",
+      "seconds": "seconds",
+      "onlineSince": "En ligne depuis"
+    },
+    "add": {
+      "triggers": ["add", "+"],
+      "helpText": "%1 `%2add Streamer_Name` (Ajoute une chaine Twitch à l'annonceur.)",
+      "gameInfoName": "(DEMO) Le nom du jeu va ici",
+      "streamInfoTitle": "(DEMO) Le titre du streaming va ici",
+      "streamInfoType": "(DEMO) LIVE/VOD/RERUN...",
+      "alreadyExists": "existe déjà !",
+      "message": "a ajouté https://www.twitch.tv/%1 à l'annonceur.",
+      "addAnnouncementChannel": "N'oubliez pas d'ajouter un canal d'annonce avec `!channel #channelName`.",
+      "doesNotExist": "https://www.twitch.tv/%1 n'existe pas !"
+    },
+    "remove": {
+      "triggers": ["rem", "remove", "-", "del", "delete"],
+      "helpText": "%1 `%2remove Streamer_Name` (Supprime une chaine Twitch de l'annonceur.)",
+      "doesNotExist": "n'existe pas !",
+      "message": "supprimé de l'annonceur."
+    },
+    "channel": {
+      "triggers": ["ch", "chn", "channel"],
+      "helpText": "%1 `%2channel #%3` ou %1 `%2channel %4` (**Requis!** Canal texte pour les annonces.)",
+      "message": "Salon d'annonce changé.",
+      "noPermissionsForChannel": "ne peut pas publier dans ce canal. Changez les permissions ou choisissez un autre canal."
+    },
+    "operator": {
+      "triggers": ["op", "operator"],
+      "helpText": "%1 `%2operator <@%3>` (Choisir un modérateur)",
+      "message": "%1 opérateurs.",
+      "noPermission": "Seul le propriétaire du serveur peut ajouter et supprimer des opérateurs."
+    },
+    "reaction": {
+      "triggers": ["react", "reaction"],
+      "helpText": "%1 `%2reaction 👍` (Active une réaction sur le message d'annonce.)",
+      "message": "%1 reaction."
+    },
+    "timezone": {
+      "triggers": ["tz", "timezone"],
+      "helpText": "%1 `%2timezone sv-SE Europe/Stockholm` (Consultez __IANA Subtag registry__ <https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry> & __IETF RFC 5646__ <https://tools.ietf.org/html/rfc5646> pour les balises locales et __IANA Time Zone Database__ <https://www.iana.org/time-zones> & __Wikipedia__ <https://en.wikipedia.org/wiki/List_of_tz_database_time_zones> pour les fuseaux horaires.)",
+      "message": "L'heure sera désormais affichée comme suit: %1"
+    },
+    "message": {
+      "triggers": ["msg", "message"],
+      "helpText": "%1 `%2message <streamerName> @everyone %name% **%status%**, avec **%game%** : *%title%*` (Changement du message d'annonce du stream. Si *<streamerName>* est rempli, cela changera le message d'annonce de ce streamer. Assurez-vous d'enlever le `<>`. Prend en charge *%name%* pour le nom du streamer, *%status%* pour le type de stream (VOD, LIVE, RERUN), *%game%* pour le titre du jeu et *%title%* pour le titre du stream, *%link%* pour le lien twitch).",
+      "message": "Modification du message d'annonce.",
+      "messageStreamer": "Modification du message d'annonce du streamer %1."
+    },
+    "prefix": {
+      "triggers": ["pfx", "prefix"],
+      "helpText": "%1 `%2prefix !` (Change le préfixe de commande du bot.)",
+      "message": "Le préfixe est maintenant `%1`."
+    },
+    "language": {
+      "triggers": ["lang", "language"],
+      "helpText": "%1 `%2language english` (Change la langue du bot.)\n**Langues disponibles:** %3",
+      "languageDoesNotExit": "Cette langue n'existe pas !\n**Langues disponibles:** %1",
+      "message": "Changement de la langue en `%1`!"
+    },
+    "announcementChannel": {
+      "triggers": ["ac", "announcementchannel"],
+      "helpText": "%1 `%2announcementchannel Streamer_Name #%3` or %1 `%2announcementchannel Streamer_Name %4` (Change le canal d'annonce pour le streamer spécifié.)",
+      "message": "cchangement de canal d'annonce pour le streamer.",
+      "noPermissionsForChannel": "ne peut pas publier dans ce canal. Changez les permissions ou choisissez un autre canal.",
+      "streamerDoesNotExist": "Le streamer n'existe pas!",
+      "announcementChannel": "Pour %1 le canal d'annonce est %2"
+    },
+    "streamers": {
+      "triggers": ["streamers", "list"],
+      "helpText": "Affiche la liste des streamers ajoutés.",
+      "message": "**Liste des streamers ajoutés :** \n%1"
+    }
+  },
+  "example": "(Exemple)",
+  "added": "ajouté",
+  "removed": "supprimé"
+}

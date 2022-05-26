@@ -1,0 +1,30 @@
+{
+  "name": "IziDream TV",
+  "version": "1.3.0",
+  "description": "Un bot Discord qui annonce la mise en ligne des chaînes Twitch.",
+  "main": "app.js",
+  "private": true,
+  "scripts": {
+    "start": "node ./app.js",
+    "lint": "standard --lint",
+    "test": "echo \"Erreur : aucun test spécifié\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Khaelo"
+  },
+  "author": "Khaelo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Khaelo"
+  },
+  "homepage": "https://github.com/Khaelo",
+  "dependencies": {
+    "discord.js": "^13.7.0",
+    "moment-timezone": "^0.5.34",
+    "node-fetch": "^3.2.4"
+  },
+  "devDependencies": {
+    "standard": "^17.0.0"
+  }
+}
